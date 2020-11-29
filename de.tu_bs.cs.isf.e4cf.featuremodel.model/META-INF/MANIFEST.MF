@@ -8,8 +8,7 @@ Bundle-ClassPath: .,
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- de.tu_bs.cs.isf.e4cf.featuremodel.model;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ConstraintGrammar,
  CrossTreeConstraints,

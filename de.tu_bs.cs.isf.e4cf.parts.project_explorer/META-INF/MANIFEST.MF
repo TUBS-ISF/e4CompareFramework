@@ -16,8 +16,8 @@ Require-Bundle: javax.inject,
  org.eclipse.e4.core.services,
  org.eclipse.e4.core.di.annotations,
  org.eclipse.e4.ui.services,
- de.tu_bs.cs.isf.e4cf.core,
- org.eclipse.e4.core.di
+ org.eclipse.e4.core.di,
+ de.tu_bs.cs.isf.e4cf.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: de.tu_bs.cs.isf.e4cf.parts.project_explorer
 Import-Package: javax.inject;version="1.0.0"

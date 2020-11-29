@@ -1,31 +1,32 @@
 package de.tu_bs.cs.isf.e4cf.core.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-import de.tu_bs.cs.isf.e4cf.core.file_structure.FileTreeElement;
 import de.tu_bs.cs.isf.e4cf.core.file_structure.components.Directory;
 import de.tu_bs.cs.isf.e4cf.core.file_structure.components.operations.CreateFile;
 
 class CreateFileTest {
 
-	private CreateFile createOp;
-	private Directory parentDir;
-	
+	@Mock
+	public CreateFile createOp;
+
+	 
 	@BeforeEach
-	public void setUp() {		
-		parentDir = new Directory("dir");
-		String filename = "createdFile";
-		createOp = new CreateFile(filename);
+	public void setUp() {
+	       MockitoAnnotations.initMocks(this);
 	}
 	
 	@Test
-	void testCreateFile() {
-		FileTreeElement createdFile = createOp.execute(parentDir);
+	void testCreateFile() {		
+		Directory d = new Directory("");
+		createOp.execute(d);
 		
-		assertTrue(createdFile.exists(), "Created file is supposed to be created.");
+		verify(createOp).execute(d);
 	}
 
 }
